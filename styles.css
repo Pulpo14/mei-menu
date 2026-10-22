@@ -1,0 +1,320 @@
+
+/* ========================================
+   MEI MENU — ESTILOS GENERALES
+   ======================================== */
+
+:root {
+    --bg: #111315;
+    --surface: #1B1E21;
+    --surface-hover: #24272A;
+    --border: #34383C;
+    --red: #B9272E;
+    --red-hover: #D93840;
+    --coral: #F08C90;
+    --text: #F5F5F5;
+    --muted: #B8BDC2;
+}
+
+/* Fondo de la aplicación */
+.stApp {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+[data-testid="stHeader"] {
+    background-color: transparent;
+}
+
+[data-testid="stAppViewContainer"] {
+    background-color: var(--bg);
+}
+
+/* Contenido principal */
+.block-container {
+    max-width: 1200px;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+}
+
+/* ========================================
+   TEXTOS
+   ======================================== */
+
+h1, h2, h3, h4 {
+    color: var(--text) !important;
+    font-weight: 750 !important;
+}
+
+p,
+label,
+[data-testid="stMarkdownContainer"] {
+    color: var(--text);
+}
+
+.stCaption,
+small {
+    color: var(--muted);
+}
+
+/* ========================================
+   ENCABEZADO PRINCIPAL
+   ======================================== */
+
+.hero {
+    background: linear-gradient(135deg, #24272A, #151719);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 30px 28px;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.hero-tag {
+    display: inline-block;
+    color: var(--coral);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.hero-title {
+    color: var(--text);
+    font-size: clamp(34px, 5vw, 52px);
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0 0 12px 0;
+}
+
+.hero-subtitle {
+    color: var(--muted);
+    font-size: 16px;
+    margin: 0;
+}
+
+/* ========================================
+   TARJETAS DE PRODUCTOS
+   ======================================== */
+
+[data-testid="stVerticalBlockBorderWrapper"] {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: border-color 0.2s ease,
+                background-color 0.2s ease;
+}
+
+[data-testid="stVerticalBlockBorderWrapper"]:hover {
+    border-color: var(--red);
+    background-color: var(--surface-hover);
+}
+
+/* Imágenes de productos */
+[data-testid="stImage"] img {
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* ========================================
+   PRECIOS
+   ======================================== */
+
+.price {
+    color: var(--coral);
+    font-size: 22px;
+    font-weight: 850;
+    margin-top: 6px;
+}
+
+/* ========================================
+   BOTONES
+   ======================================== */
+
+.stButton > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--red);
+    color: #FFFFFF;
+    border: 1px solid var(--red);
+    border-radius: 10px;
+    font-weight: 750;
+    min-height: 42px;
+    padding: 8px 16px;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.15s ease;
+}
+
+.stButton > button:hover {
+    background-color: var(--red-hover);
+    border-color: var(--red-hover);
+    color: #FFFFFF;
+}
+
+.stButton > button:active {
+    transform: scale(0.98);
+}
+
+.stButton > button p {
+    color: #FFFFFF !important;
+    font-weight: 750;
+}
+
+/* ========================================
+   BUSCADOR Y FILTROS
+   ======================================== */
+
+[data-testid="stTextInput"] input,
+[data-testid="stNumberInput"] input {
+    background-color: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+[data-testid="stTextInput"] input:focus,
+[data-testid="stNumberInput"] input:focus {
+    border-color: var(--red);
+    box-shadow: 0 0 0 1px var(--red);
+}
+
+/* Selector de categorías */
+[data-testid="stSelectbox"] div[data-baseweb="select"] > div {
+    background-color: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+    border-radius: 10px;
+}
+
+/* Opciones desplegables */
+[data-baseweb="popover"],
+[data-baseweb="menu"] {
+    background-color: var(--surface);
+}
+
+[data-baseweb="menu"] li {
+    color: var(--text);
+}
+
+/* ========================================
+   CARRITO Y TOTALES
+   ======================================== */
+
+.cart-label {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cart-total {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 18px;
+}
+
+.cart-amount {
+    color: var(--coral);
+    font-size: 28px;
+    font-weight: 900;
+}
+
+/* Separadores */
+hr {
+    border-color: var(--border);
+    opacity: 0.8;
+}
+
+/* ========================================
+   CARRITO FLOTANTE CLICKEABLE
+   ======================================== */
+
+.carrito-flotante {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 999999;
+    display: inline-block;
+    background-color: var(--red);
+    color: #FFFFFF !important;
+    border: 1px solid #E15B61;
+    border-radius: 50px;
+    padding: 14px 22px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+    font-size: 15px;
+    font-weight: 750;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.carrito-flotante:hover {
+    background-color: var(--red-hover);
+    color: #FFFFFF !important;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.55);
+}
+
+.carrito-flotante:active {
+    transform: scale(0.97);
+}
+
+/* ========================================
+   MENSAJES Y ALERTAS
+   ======================================== */
+
+[data-testid="stAlert"] {
+    border-radius: 12px;
+}
+
+/* ========================================
+   ADAPTACIÓN A CELULARES
+   ======================================== */
+
+@media (max-width: 640px) {
+    .block-container {
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 6rem;
+    }
+
+    .hero {
+        padding: 24px 16px;
+        border-radius: 16px;
+        margin-bottom: 20px;
+    }
+
+    .hero-title {
+        font-size: 34px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+
+    .stButton > button {
+        min-height: 40px;
+        padding: 7px 10px;
+    }
+
+    .cart-amount {
+        font-size: 24px;
+    }
+
+    .carrito-flotante {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 17px;
+        font-size: 14px;
+    }
+}
